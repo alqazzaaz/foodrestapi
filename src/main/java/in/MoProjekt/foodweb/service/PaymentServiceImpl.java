@@ -42,8 +42,8 @@ public class PaymentServiceImpl implements PaymentService {
         SessionCreateParams params = SessionCreateParams.builder().addPaymentMethodType(
             SessionCreateParams.PaymentMethodType.CARD)
             .setMode(SessionCreateParams.Mode.PAYMENT)
-            .setSuccessUrl("http://localhost:5173/payment/success/"+ orderEntity.getId())
-            .setCancelUrl("http://localhost:5173/payment/fail/"+ orderEntity.getId())
+            .setSuccessUrl("https://foodrestapi-production-471c.up.railway.app/payment/success/"+ orderEntity.getId())
+            .setCancelUrl("https://foodrestapi-production-471c.up.railway.app/payment/fail/"+ orderEntity.getId())
             .addLineItem(
                 SessionCreateParams.LineItem.builder()
                     .setQuantity(1L)
