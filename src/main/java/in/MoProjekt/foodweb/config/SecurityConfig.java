@@ -42,7 +42,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/register", "/api/login", "/api/foods/**").permitAll()
-                        .requestMatchers("/api/nutrition/**").permitAll()   // <-- AI always allowed
+                        .requestMatchers("/api/nutrition/**").permitAll()
                         .requestMatchers("/api/cart/**").authenticated()
                         .requestMatchers("/api/orders/**").authenticated()
                         .anyRequest().authenticated()

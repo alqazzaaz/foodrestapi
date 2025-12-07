@@ -42,8 +42,8 @@ public class PaymentServiceImpl implements PaymentService {
         SessionCreateParams params = SessionCreateParams.builder().addPaymentMethodType(
             SessionCreateParams.PaymentMethodType.CARD)
             .setMode(SessionCreateParams.Mode.PAYMENT)
-            .setSuccessUrl("https://foodrestapi-production-471c.up.railway.app/payment/success/"+ orderEntity.getId())
-            .setCancelUrl("https://foodrestapi-production-471c.up.railway.app/payment/fail/"+ orderEntity.getId())
+            .setSuccessUrl("https://flavorhaus.netlify.app/payment/success/"+ orderEntity.getId())
+            .setCancelUrl("https://flavorhaus.netlify.app/payment/fail/"+ orderEntity.getId())
             .addLineItem(
                 SessionCreateParams.LineItem.builder()
                     .setQuantity(1L)
